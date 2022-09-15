@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="30dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:id="@+id/anim"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            app:cardBackgroundColor="#07FFB9"
+            android:layout_width="150dp"
+            app:cardCornerRadius="150dp"
+            android:layout_height="150dp">
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/buyer_order_confirm" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/anim"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        android:text="Thank to shopping with us.We will contact with you shortly.Have a good day"
+        android:textColor="#FFEB3B"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_weight="0.01"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/yes"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="#1BFF02"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/longfox"
+                android:text="Okay"
+                android:textColor="@color/white" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -49,7 +49,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
-public class Location extends AppCompatActivity implements OnUserEarnedRewardListener {
+public class Location extends AppCompatActivity {
     FusedLocationProviderClient fusedLocationProviderClient;
     private final static int REQUEST_CODE=100;
     CardView location;
@@ -71,12 +71,8 @@ public class Location extends AppCompatActivity implements OnUserEarnedRewardLis
 
 
 
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-                loadAd();
-            }
-        });
+
+
 
         Dialog dialog1=new Dialog(Location.this);
         dialog1.setContentView(R.layout.location_dialog);
@@ -96,85 +92,19 @@ public class Location extends AppCompatActivity implements OnUserEarnedRewardLis
             public void onClick(View view) {
                 get_location();
 
-                if (rewardedInterstitialAd!=null) {
-
-                    rewardedInterstitialAd.show(Location.this,/*
-    OnUserEarnedRewardListener */ Location.this);
-                }else{
-                    Toast.makeText(Location.this,"Add not loaded",Toast.LENGTH_SHORT).show();
-                    Log.e(TAG,"Ad not loaded");
-                }
             }
         });
 
-
     }
 
 
-
-
-
-    private void loadAd() {
-
-        RewardedInterstitialAd.load(Location.this, "ca-app-pub-3940256099942544/5354046379",
-                new AdRequest.Builder().build(),  new RewardedInterstitialAdLoadCallback() {
-                    @Override
-                    public void onAdLoaded(RewardedInterstitialAd ad) {
-
-
-
-                        if (rewardedInterstitialAd!=null) {
-
-                            rewardedInterstitialAd.show(Location.this,/*
-    OnUserEarnedRewardListener */ Location.this);
-                        }else{
-                            Toast.makeText(Location.this,"Add not loaded",Toast.LENGTH_SHORT).show();
-                            Log.e(TAG,"Ad not loaded");
-                        }
-
-                        rewardedInterstitialAd = ad;
-                        Log.e(TAG, "onAdLoaded");
-
-                        rewardedInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
-                            @Override
-                            public void onAdFailedToShowFullScreenContent(AdError adError) {
-                                Log.i(TAG, "onAdFailedToShowFullScreenContent");
-                            }
-
-                            @Override
-                            public void onAdShowedFullScreenContent() {
-                                Log.i(TAG, "onAdShowedFullScreenContent");
-                            }
-
-                            @Override
-                            public void onAdDismissedFullScreenContent() {
-                                Log.i(TAG, "onAdDismissedFullScreenContent");
-                                loadAd();
-                            }
-                        });
-
-
-                    }
-                    @Override
-                    public void onAdFailedToLoad(LoadAdError loadAdError) {
-                        Log.e(TAG, "onAdFailedToLoad");
-                    }
-                });
-
-    }
-
-
-
-    @Override
-    public void onUserEarnedReward(@NonNull RewardItem rewardItem) {
-        Toast.makeText(this, "You got reward", Toast.LENGTH_SHORT).show();
-    }
 
 
 
 
 
     public void get_location(){
+
         if(ContextCompat.checkSelfPermission(Location.this, Manifest.permission.ACCESS_FINE_LOCATION)== PackageManager.PERMISSION_GRANTED){
             fusedLocationProviderClient.getLastLocation().addOnSuccessListener(new OnSuccessListener<android.location.Location>() {
                 @Override
@@ -199,14 +129,17 @@ public class Location extends AppCompatActivity implements OnUserEarnedRewardLis
                             dialog1.show();
                             TextView location_for_text=dialog1.findViewById(R.id.text);
                             if(city!=null){
+
                                 location_for_text.setText("Your location is updated. Your location is now "+city);
                             }else{
+
                                 location_for_text.setText("Can't update your location. May be you haven't turned on your location.Please turn on then try");
                             }
                             ExtendedFloatingActionButton dash=dialog1.findViewById(R.id.goto_dashboard);
                             dash.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View view) {
+
                                     finish();
                                 }
                             });
@@ -220,6 +153,7 @@ public class Location extends AppCompatActivity implements OnUserEarnedRewardLis
                 }
             });
         }else{
+
             ask_permission();
         }
     }
@@ -233,10 +167,13 @@ public class Location extends AppCompatActivity implements OnUserEarnedRewardLis
         if(requestCode==REQUEST_CODE){
             if(grantResults.length>0&&grantResults[0]==PackageManager.PERMISSION_GRANTED){
                 get_location();
+
             }else{
+
                 Toast.makeText(this, "permission not granted", Toast.LENGTH_SHORT).show();
             }
 
         }
     }
+
 }

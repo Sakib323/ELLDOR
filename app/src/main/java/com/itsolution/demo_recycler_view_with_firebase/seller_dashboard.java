@@ -15,6 +15,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
@@ -39,11 +41,12 @@ public class seller_dashboard extends AppCompatActivity {
     FirebaseStorage mStorage;
     RecyclerView recyclerView;
     StudentAdapter studentAdapter;
-    ExtendedFloatingActionButton advertise;
-    ImageButton host_new_business,upt_loc,google_map,user;
+    LinearLayout advertise;
+    LinearLayout upt_loc,user;
     TextView tv_loc;
     boolean preview=false;
     Boolean register=false;
+    Boolean shop_or_item=false;
 
     List<StudentModel> studentMdlList;
 
@@ -53,13 +56,44 @@ public class seller_dashboard extends AppCompatActivity {
         setContentView(R.layout.activity_seller_dashboard);
 
 
-        FloatingActionButton add_business=findViewById(R.id.add);
-        add_business.setBackgroundColor(5);
+        SharedPreferences getRegState=getSharedPreferences("register_done",MODE_PRIVATE);
+        shop_or_item=getRegState.getBoolean("shop_setup",false);
+
+
+        upt_loc=findViewById(R.id.location_);
+        upt_loc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(seller_dashboard.this,order.class);
+                startActivity(intent);
+            }
+        });
+
+        user=findViewById(R.id.profile);
+        user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(register==true){
+                    Intent intent = new Intent(seller_dashboard.this,RetriveDataInRecyclerView.class);
+                    startActivity(intent);
+                }else {
+                    Intent intent = new Intent(seller_dashboard.this,RetriveDataInRecyclerView.class);
+                    startActivity(intent);
+                }
+            }
+        });
+
+        ExtendedFloatingActionButton add_business=findViewById(R.id.add);
+        if(shop_or_item==false){
+            add_business.setText("ADD PRODUCT TO YOUR SHOP");
+        }
+
         add_business.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(seller_dashboard.this,MainActivity.class);
-                startActivity(intent);
+                    Intent intent =new Intent(seller_dashboard.this,MainActivity.class);
+                    startActivity(intent);
+
             }
         });
 
@@ -96,7 +130,7 @@ public class seller_dashboard extends AppCompatActivity {
         ActionBar actionBar;
         actionBar = getSupportActionBar();
         actionBar.hide();
-        advertise=findViewById(R.id.advertise);
+        advertise=findViewById(R.id.google_map);
         advertise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -124,13 +158,7 @@ public class seller_dashboard extends AppCompatActivity {
         location_lay.setText(city_address);
 
 
-
-
-
-
-
         mDatabase= FirebaseDatabase.getInstance();
-
         mRef=mDatabase.getReference().child("User").child(name).child("shop");
         mStorage= FirebaseStorage.getInstance();
         recyclerView=findViewById(R.id.recyclerview_id);
@@ -139,7 +167,7 @@ public class seller_dashboard extends AppCompatActivity {
 
 
         studentMdlList=new ArrayList<StudentModel>();
-        studentAdapter=new StudentAdapter(seller_dashboard.this,studentMdlList);
+        studentAdapter=new StudentAdapter(seller_dashboard.this,studentMdlList,null);
 
 
         recyclerView.setAdapter(studentAdapter);

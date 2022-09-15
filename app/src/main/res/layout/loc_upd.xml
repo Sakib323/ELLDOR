@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="30dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:id="@+id/anim"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            app:cardBackgroundColor="#07FFB9"
+            android:layout_width="150dp"
+            app:cardCornerRadius="150dp"
+            android:layout_height="150dp">
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/location_with_pin" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/anim"
+        android:layout_centerInParent="true"
+        android:padding="10dp"
+        android:text="if your location has been changed then then update the location"
+        android:textColor="#FFEB3B"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_below="@id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_centerHorizontal="true"
+        android:layout_weight="0.01"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/yes"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="10dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="#1BFF02">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/longfox"
+                android:textColor="@color/white"
+                android:text="Yes"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/no"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="10dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="100dp"
+            app:cardBackgroundColor="#F44336">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/longfox"
+                android:textColor="@color/white"
+                android:text="No"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+</RelativeLayout>

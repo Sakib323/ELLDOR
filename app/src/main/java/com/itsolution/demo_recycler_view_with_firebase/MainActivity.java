@@ -40,11 +40,12 @@ public class MainActivity extends AppCompatActivity {
     TextInputLayout edtFirst,edtLast;
     CardView btninsert;
     ProgressBar progressDialog;
-    Boolean reg;
-    String name,email,phone;
+    Boolean reg,shop_or_item;
+    String name,email,phone,node;
     public String city_address;
     private static final int Gallery_Code=1;
     Uri image_uri=null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,9 +64,18 @@ public class MainActivity extends AppCompatActivity {
             city_address="unknown";
         }
 
+
         SharedPreferences getRegState=getSharedPreferences("register_done",MODE_PRIVATE);
         reg=getRegState.getBoolean("state",false);
+        shop_or_item=getRegState.getBoolean("shop_setup",false);
 
+
+
+        btninsert=findViewById(R.id.btn);
+        mDatabase=FirebaseDatabase.getInstance();
+        mRef=mDatabase.getReference().child(city_address);
+        mStorage=FirebaseStorage.getInstance();
+        progressDialog=new ProgressBar(this);
 
         SharedPreferences user_data=getSharedPreferences("business_info",MODE_PRIVATE);
         name=user_data.getString("name","can't get name");
@@ -74,13 +84,19 @@ public class MainActivity extends AppCompatActivity {
 
 
         edtFirst=findViewById(R.id.text1);
+
         edtLast=findViewById(R.id.text2);
 
-        btninsert=findViewById(R.id.btn);
-        mDatabase=FirebaseDatabase.getInstance();
-        mRef=mDatabase.getReference().child(city_address);
-        mStorage=FirebaseStorage.getInstance();
-        progressDialog=new ProgressBar(this);
+        if (shop_or_item==false){
+            edtFirst.setHint("Type your product name");
+            edtLast.setHint("Product price with shipping cost in gh₵");
+        }
+
+
+
+
+
+
 
         btninsert.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,8 +134,26 @@ public class MainActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<Uri> task) {
 
 
+                            DatabaseReference root = null;
 
-                            DatabaseReference root=FirebaseDatabase.getInstance().getReference().child("User").child(name).child("shop").child(name+"_"+phone+"_"+fn);
+                            if(shop_or_item==true){
+                                root=FirebaseDatabase.getInstance().getReference().child("User").child(name).child("shop").child(name);
+                                SharedPreferences sharedPreferences=getSharedPreferences("register_done",MODE_PRIVATE);
+                                SharedPreferences.Editor editor=sharedPreferences.edit();
+                                editor.putBoolean("shop_setup",false);
+                                editor.apply();
+
+                                String t = task.getResult().toString();
+                                DatabaseReference newPost = mRef.child(name+"_"+phone+"_"+fn);
+                                newPost.child("firstName").setValue(name);
+                                newPost.child("lastName").setValue(ln);
+                                newPost.child("image").setValue(task.getResult().toString());
+
+
+                            }
+                            if(shop_or_item==false){
+                                  root=FirebaseDatabase.getInstance().getReference().child("User").child(name).child("shop").child("shop_item").child("item").child(name+"_"+phone+"_"+fn);
+                            }
                             HashMap<String,String>UserMap=new HashMap<>();
                             UserMap.put("firstName",fn);
                             UserMap.put("lastName",ln);
@@ -127,15 +161,13 @@ public class MainActivity extends AppCompatActivity {
                             root.setValue(UserMap);
 
 
-
-                            String t = task.getResult().toString();
-                            DatabaseReference newPost = mRef.child(name+"_"+phone+"_"+fn);
-                            newPost.child("firstName").setValue(fn);
-                            newPost.child("lastName").setValue(ln);
-                            newPost.child("image").setValue(task.getResult().toString());
                             progressDialog.dismiss();
+
+
                             Intent intent = new Intent(MainActivity.this, RetriveDataInRecyclerView.class);
                             startActivity(intent);
+
+
                         }
                     });
                 }

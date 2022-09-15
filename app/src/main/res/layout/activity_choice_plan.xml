@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".choice_plan">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choice a plan"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#E91E63"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold">
+    </TextView>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/lnr1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/usd_5"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shop_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:elevation="20dp"
+            app:cardBackgroundColor="#FB4785"
+            app:cardCornerRadius="15dp">
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Reach 20,000 visitor per day for"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:text="$5"
+                android:textColor="#FFEB3B"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/usd_10"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shop_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:elevation="20dp"
+            app:cardBackgroundColor="#FB4785"
+            app:cardCornerRadius="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Reach 20,000 visitor daily for 3 days"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:text="$5"
+                android:textColor="#FFEB3B"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lnr2"
+        android:layout_below="@id/lnr1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/usd_15"
+            android:layout_marginRight="10dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="#FB4785"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp"
+            android:elevation="20dp"
+            android:layout_below="@id/shop_image">
+            <TextView
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Reach 20,000 visitor daily for 5 days" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$15"
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textColor="#FFEB3B"
+                android:layout_gravity="center_horizontal"/>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/usd_25"
+            android:layout_marginRight="10dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="#FB4785"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp"
+            android:elevation="20dp"
+            android:layout_below="@id/shop_image">
+            <TextView
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Reach 20,000 visitor daily for 7 days" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$25"
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textColor="#FFEB3B"
+                android:layout_gravity="center_horizontal"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnr3"
+        android:layout_below="@id/lnr2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/usd_50"
+            android:layout_marginRight="10dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="#FB4785"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp"
+            android:elevation="20dp"
+            android:layout_below="@id/shop_image">
+            <TextView
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Reach 20,000 visitor daily for 14 days" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$50"
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textColor="#FFEB3B"
+                android:layout_gravity="center_horizontal"/>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/usd_120"
+            android:layout_marginRight="10dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="#FB4785"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp"
+            android:elevation="20dp"
+            android:layout_below="@id/shop_image">
+            <TextView
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Reach 20,000 visitor daily for 30 days" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$120"
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textColor="#FFEB3B"
+                android:layout_gravity="center_horizontal"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lnr4"
+        android:layout_below="@id/lnr3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/usd_250"
+            android:layout_marginRight="10dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="#FB4785"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp"
+            android:elevation="20dp"
+            android:layout_below="@id/shop_image">
+            <TextView
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Reach 20,000 visitor daily for 60 days" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$250"
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textColor="#FFEB3B"
+                android:layout_gravity="center_horizontal"/>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/usd_400"
+            android:layout_marginRight="10dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="#FB4785"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp"
+            android:elevation="20dp"
+            android:layout_below="@id/shop_image">
+            <TextView
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Reach 20,000 visitor daily for 90 days" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$400"
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textColor="#FFEB3B"
+                android:layout_gravity="center_horizontal"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lnr5"
+        android:layout_below="@id/lnr4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/usd_850"
+            android:layout_marginRight="10dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="#FB4785"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp"
+            android:elevation="20dp"
+            android:layout_below="@id/shop_image">
+            <TextView
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Reach 20,000 visitor daily for 180 days" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$850"
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textColor="#FFEB3B"
+                android:layout_gravity="center_horizontal"/>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/usd_1500"
+            android:layout_marginRight="10dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="#FB4785"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp"
+            android:elevation="20dp"
+            android:layout_below="@id/shop_image">
+            <TextView
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Reach 20,000 visitor daily for 360 days" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$1500"
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textColor="#FFEB3B"
+                android:layout_gravity="center_horizontal"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

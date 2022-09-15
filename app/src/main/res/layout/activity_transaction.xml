@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".payment_activity">
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:id="@+id/card_number"
+        android:hint="card number"
+        android:layout_height="70dp"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:id="@+id/month"
+        android:hint="month"
+        android:layout_below="@id/card_number"
+        android:layout_height="70dp"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:id="@+id/year"
+        android:hint="year"
+        android:layout_below="@id/month"
+        android:layout_height="70dp"/>
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:id="@+id/cvc"
+        android:hint="cvc"
+        android:layout_below="@id/year"
+        android:layout_height="70dp"/>
+
+    <Button
+        android:id="@+id/pay"
+        android:layout_below="@+id/cvc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pay"/>
+
+
+</RelativeLayout>

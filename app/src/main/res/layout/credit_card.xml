@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/background_gradient"
+    tools:context=".buy_product">
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/shop"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_centerHorizontal="true"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/buying" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/a"
+            app:boxBackgroundColor="#70FA76"
+            android:layout_width="match_parent"
+            app:startIconDrawable="@drawable/ic_baseline_store_mall_directory_24"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            android:layout_height="50dp">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/card_number"
+                android:layout_width="match_parent"
+                android:textColor="#F4AE36"
+                android:hint="Type your card number"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/a"
+            android:id="@+id/b"
+            android:layout_width="match_parent"
+            app:boxBackgroundColor="#70FA76"
+            app:startIconDrawable="@drawable/ic_baseline_store_mall_directory_24"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            android:layout_height="50dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/month"
+                android:layout_width="match_parent"
+                android:textColor="#F4AE36"
+                android:hint="Type your expiry month"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/c"
+            android:layout_below="@id/b"
+            android:layout_width="match_parent"
+            app:boxBackgroundColor="#70FA76"
+            app:startIconDrawable="@drawable/ic_baseline_store_mall_directory_24"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            android:layout_height="50dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/year"
+                android:layout_width="match_parent"
+                android:textColor="#F4AE36"
+                android:hint="Type your expiry year"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/c"
+            android:layout_width="match_parent"
+            app:startIconDrawable="@drawable/ic_baseline_store_mall_directory_24"
+            app:boxCornerRadiusBottomStart="15dp"
+            app:boxCornerRadiusBottomEnd="15dp"
+            app:boxBackgroundColor="#70FA76"
+            app:boxCornerRadiusTopEnd="15dp"
+            app:boxCornerRadiusTopStart="15dp"
+            android:layout_height="50dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cvc"
+                android:layout_width="match_parent"
+                android:textColor="#F4AE36"
+                android:hint="Type your cvc code"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pay"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        app:cardBackgroundColor="#1CFF25"
+        app:cardCornerRadius="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/longfox"
+            android:gravity="center"
+            android:padding="1dp"
+            android:text="Buy Product"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>

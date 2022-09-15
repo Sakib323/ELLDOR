@@ -42,14 +42,12 @@ public class Register_business extends AppCompatActivity {
         actionBar = getSupportActionBar();
         actionBar.hide();
 
-
         regUsername = findViewById(R.id.username);
         regEmail = findViewById(R.id.reg_email);
         regPhoneno = findViewById(R.id.reg_phoneNo);
         regPassword = findViewById(R.id.reg_password);
         regBtn = findViewById(R.id.registerUser);
         regToLoginBtn = findViewById(R.id.reg_login_btn);
-
 
         final ProgressBar simpleProgressBar = (ProgressBar) findViewById(R.id.simpleProgressBar);
 
@@ -126,7 +124,7 @@ public class Register_business extends AppCompatActivity {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             if(snapshot.exists()) {
-                                regUsername.setError("This name already exist");
+                                regUsername.setError("This business name already exist");
                                 regUsername.setErrorEnabled(true);
                                 regUsername.getEditText().setText("");
 
@@ -137,6 +135,7 @@ public class Register_business extends AppCompatActivity {
                                 SharedPreferences game = getSharedPreferences("register_done", MODE_PRIVATE);
                                 SharedPreferences.Editor editor = game.edit();
                                 editor.putBoolean("state",true);
+                                editor.putBoolean("shop_setup",true);
                                 editor.apply();
 
 
@@ -149,7 +148,7 @@ public class Register_business extends AppCompatActivity {
                                 String phoneNo = regPhoneno.getEditText().getText().toString();
                                 String password = regPassword.getEditText().getText().toString();
 
-                                SharedPreferences sharedPref = getSharedPreferences("business_info", MODE_PRIVATE);
+                                SharedPreferences sharedPref = getSharedPreferences("business_info1", MODE_PRIVATE);
                                 SharedPreferences.Editor editor1 = sharedPref.edit();
                                 editor1.putString("Business_User",username);
                                 editor1.putString("BusinessEmail",email);

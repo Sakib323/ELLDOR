@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="User Name">
+            android:hint="Business / Shop Name">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:textColor="@color/white"

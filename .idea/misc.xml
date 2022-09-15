@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/drawable-v24/background_gradient.xml" value="0.162" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/drawable-v24/top_button_background.xml" value="0.1595" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/drawable-v24/white_background.xml" value="0.1445" />
         <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/drawable/bg_with_radius.xml" value="0.162" />
         <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.1" />
         <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/drawable/ic_baseline_add_location_24.xml" value="0.1" />
@@ -12,24 +14,42 @@
         <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.1" />
         <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/drawable/ic_baseline_person_add_24.xml" value="0.1" />
         <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout-land/ui.xml" value="0.46643864899529713" />
         <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/Location_dialog.xml" value="0.2" />
-        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_advertise.xml" value="0.3375" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_advertise.xml" value="0.1" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_buy_product.xml" value="0.22" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_choice_plan.xml" value="0.27704147071398033" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_full_info.xml" value="0.27704147071398033" />
         <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_google_map.xml" value="0.3375" />
         <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_help.xml" value="0.22" />
-        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_location.xml" value="0.16" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_location.xml" value="0.22" />
         <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_login_business.xml" value="0.2" />
-        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_register_business.xml" value="0.22" />
-        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_retrive_data_in_recycler_view.xml" value="0.18" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_mobile_payment.xml" value="0.27704147071398033" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_order.xml" value="0.18" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_register_business.xml" value="0.18" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_retrive_data_in_recycler_view.xml" value="0.25" />
         <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_seller_dashboard.xml" value="0.22" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_shopitem.xml" value="0.2" />
         <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_splash_screen.xml" value="0.18" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/activity_transaction.xml" value="0.25" />
         <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/add_location.xml" value="0.3375" />
         <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/advertise_from_database.xml" value="0.22" />
         <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/after_getting_location.xml" value="0.3375" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/buying_confirm.xml" value="0.27704147071398033" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/credit_card.xml" value="0.27704147071398033" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/design_for_recycler_product.xml" value="0.22" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/design_order_recycler_view.xml" value="0.25" />
         <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/design_row_for_recycler_view.xml" value="0.25" />
-        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/dialog_for_seller.xml" value="0.3375" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/dialog_for_item_and_everything.xml" value="0.27704147071398033" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/dialog_for_order.xml" value="0.2" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/dialog_for_payment.xml" value="0.22" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/dialog_for_seller.xml" value="0.18" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/full_info.xml" value="0.27704147071398033" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/loc_upd.xml" value="0.27704147071398033" />
         <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/location_dialog.xml" value="0.33" />
         <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/reboot_app.xml" value="0.25" />
+        <entry key="..\:/Users/Sakib Ahmed/Desktop/demo_recycler_view_with_firebase/app/src/main/res/layout/ui.xml" value="0.16" />
       </map>
     </option>
   </component>
@@ -38,5 +58,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
   </component>
 </project>

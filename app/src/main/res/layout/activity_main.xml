@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:hint="Shop name"
+            android:hint="Shop Name/Business Name"
             android:padding="10dp"
             android:textColorHint="@color/white">
 
@@ -73,22 +73,24 @@
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/btn"
         android:layout_width="200dp"
         android:layout_height="70dp"
-        app:cardBackgroundColor="#FF5722"
         android:layout_alignParentBottom="true"
-        android:id="@+id/btn"
         android:layout_centerHorizontal="true"
+        app:cardBackgroundColor="#FF5722"
         app:cardCornerRadius="30dp">
+
         <TextView
-            android:padding="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/longfox"
+            android:gravity="center"
+            android:padding="5dp"
             android:text="Upload Signboard"
             android:textColor="@color/white"
-            android:textSize="15sp"
-            android:fontFamily="@font/longfox"
-            android:layout_gravity="center" android:gravity="center"/>
+            android:textSize="15sp" />
     </androidx.cardview.widget.CardView>
 
 
